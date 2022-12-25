@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GDFullscreenFix:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GDFullscreenFix_jar</output-path>
+    <root id="archive" name="GDFullscreenFix.jar">
+      <element id="module-output" name="GDFullscreenFix" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../GitHub/Dash4j/out/artifacts/dash4j_jar/dash4j.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

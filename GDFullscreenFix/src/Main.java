@@ -10,11 +10,16 @@ public class Main {
 
         SaveExplorer.loadSave();
         LinkedHashMap<String, Object> gameManager = SaveExplorer.getGameManager();
-        LinkedHashMap<String, Object> valueKeeper = (LinkedHashMap<String, Object>) SaveExplorer.getDataFromKey(gameManager, "valueKeeper");
+
+        if(!gameManager.containsValue("valueKeeper")){
+            gameManager.put("valueKeeper", new LinkedHashMap<String, Object>());
+        }
+
+        LinkedHashMap<String, Object> valueKeeper = (LinkedHashMap<String, Object>) gameManager.get("valueKeeper");
         valueKeeper.put("gv_0025", new SaveValue('s', "1"));
 
         SaveExplorer.setDataFromKey(gameManager, "valueKeeper", valueKeeper);
         SaveExplorer.updateGameManager();
-        
+
     }
 }
